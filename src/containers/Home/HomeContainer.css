@@ -1,0 +1,162 @@
+.content {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   overflow-x: hidden;
+   margin-top: 11.5vh;
+   padding: 7rem 0;
+   background-color: var(--dark-alt);
+}
+
+.search__query {
+   font-size: 32px;
+   color: white;
+   font-weight: 700;
+   margin-bottom: 1rem;
+}
+
+.search__caption {
+   text-align: center;
+   margin-bottom: 1rem;
+}
+
+.search__related {
+   display: flex;
+   align-items: center;
+}
+
+.related {
+   font-weight: 600;
+   margin-right: 1rem;
+   color: white;
+}
+
+.query__related {
+   display: flex;
+}
+
+.query__related a {
+   cursor: pointer;
+   color: var(--primary);
+   transition: 0.4s ease;
+}
+
+.query__related a:hover {
+   color: var(--primary-alt);
+   transition: 0.4s ease;
+}
+
+.query__related a:not(:last-child) {
+   margin-right: 1rem;
+}
+
+/* card */
+.card__container {
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+   box-sizing: border-box;
+   padding: 2rem 4rem;
+   justify-content: space-between;
+   gap: 2rem;
+}
+
+.loading {
+   color: rgb(114, 114, 114);
+   margin-top: 3rem;
+   animation: spin 1s linear infinite;
+   display: none;
+}
+
+.loading__active {
+   display: block;
+}
+
+@keyframes spin {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+@media screen and (min-width: 0px) and (max-width: 485px) {
+   .card__container {
+      padding: 2rem;
+   }
+   .content {
+      margin-top: 10vh;
+      padding: 4rem 0;
+   }
+
+   .search__related {
+      flex-direction: column;
+   }
+
+   .query__related {
+      flex-wrap: wrap;
+      justify-content: center;
+      box-sizing: border-box;
+      padding: 0 2rem;
+   }
+
+   .related {
+      margin-right: 0;
+      margin-bottom: 1rem;
+   }
+   .search__query {
+      font-size: 28px;
+   }
+
+   .search__caption {
+      width: 70%;
+      line-height: 1.5;
+   }
+
+   .query__related a {
+      margin: 0.2rem;
+   }
+}
+
+@media screen and (min-width: 485px) and (max-width: 900px) {
+   .content {
+      margin-top: 15vh;
+      padding: 4rem 0;
+   }
+
+   .search__query {
+      font-size: 28px;
+   }
+
+   .search__caption {
+      width: 70%;
+      line-height: 1.5;
+   }
+
+   .search__related {
+      flex-direction: column;
+   }
+
+   .query__related {
+      flex-wrap: wrap;
+      justify-content: center;
+      box-sizing: border-box;
+      padding: 0 5rem;
+   }
+
+   .related {
+      margin-right: 0;
+      margin-bottom: 1rem;
+   }
+
+   .query__related a {
+      margin: 0.2rem;
+   }
+
+   .card__container {
+      padding: 2.4rem;
+   }
+}

@@ -1,0 +1,115 @@
+.nav__container {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+}
+
+.nav {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   align-items: center;
+   background-color: var(--dark-alt);
+   box-sizing: border-box;
+   padding: 0 10vw;
+}
+
+.nav__logo {
+   display: flex;
+   align-items: center;
+   flex: 33%;
+}
+
+.nav__logo-icon {
+   font-size: 16px;
+   font-weight: 700;
+   color: white;
+   margin-right: 0.5rem;
+}
+
+.nav__logo-title {
+   font-size: 14px;
+   font-weight: 700;
+   color: white;
+}
+
+.nav__link {
+   display: flex;
+   align-items: center;
+   flex: 33%;
+   justify-content: center;
+}
+
+.nav__item {
+   box-sizing: border-box;
+   padding: 1.6rem;
+   cursor: pointer;
+   transition: 0.3s ease;
+   position: relative;
+}
+
+.nav__item:hover {
+   background-color: var(--dark);
+   transition: 0.3s ease;
+}
+
+.nav__title {
+   color: white;
+   font-weight: 500;
+   font-size: 13px;
+}
+
+.nav__btns {
+   display: flex;
+   align-items: center;
+   flex: 33%;
+   justify-content: flex-end;
+}
+
+.btn__nav {
+   outline: none;
+   border: none;
+   background: none;
+   color: white;
+   cursor: pointer;
+   font-size: 13px;
+   letter-spacing: 0.5px;
+   font-weight: 400;
+   padding: 0.6rem 1rem;
+}
+
+.btn__nav:last-child {
+   border: 0.2px solid rgb(168, 168, 168);
+}
+
+.nav__img {
+   width: 2rem;
+   height: 2rem;
+   border-radius: 50%;
+   background-position: center;
+   background-size: cover;
+   overflow: hidden;
+   cursor: pointer;
+   margin-left: 1rem;
+}
+
+.nav__img img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+@media screen and (min-width: 0px) and (max-width: 564px) {
+   .nav__link {
+      display: none;
+   }
+
+   .btn__nav {
+      display: none;
+   }
+
+   .nav {
+      padding: 0.8rem 10vw;
+   }
+}
