@@ -100,7 +100,11 @@
    object-fit: cover;
 }
 
-@media screen and (min-width: 0px) and (max-width: 564px) {
+.nav__bars {
+   display: none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 485px) {
    .nav__link {
       display: none;
    }
@@ -111,5 +115,33 @@
 
    .nav {
       padding: 0.8rem 10vw;
+   }
+
+   .nav__bars {
+      display: block;
+      color: white;
+      margin-left: 1rem;
+      cursor: pointer;
+   }
+}
+
+@media screen and (min-width: 485px) and (max-width: 900px) {
+   .nav__link {
+      display: none;
+   }
+
+   .btn__nav {
+      display: none;
+   }
+
+   .nav {
+      padding: 0.8rem 10vw;
+   }
+
+   .nav__bars {
+      display: block;
+      color: white;
+      margin-left: 1rem;
+      cursor: pointer;
    }
 }

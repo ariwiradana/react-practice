@@ -6,7 +6,7 @@
    width: 100%;
    overflow-x: hidden;
    margin-top: 11.5vh;
-   padding: 7rem 0;
+   padding: 5rem 0;
    background-color: var(--dark-alt);
 }
 
@@ -37,18 +37,18 @@
    display: flex;
 }
 
-.query__related a {
+.query__related div {
    cursor: pointer;
    color: var(--primary);
    transition: 0.4s ease;
 }
 
-.query__related a:hover {
-   color: var(--primary-alt);
+.query__related div:hover {
+   color: var(--primary-light);
    transition: 0.4s ease;
 }
 
-.query__related a:not(:last-child) {
+.query__related div:not(:last-child) {
    margin-right: 1rem;
 }
 
@@ -116,7 +116,7 @@
       line-height: 1.5;
    }
 
-   .query__related a {
+   .query__related div {
       margin: 0.2rem;
    }
 }
@@ -144,7 +144,7 @@
       flex-wrap: wrap;
       justify-content: center;
       box-sizing: border-box;
-      padding: 0 5rem;
+      padding: 0 2rem;
    }
 
    .related {
@@ -152,7 +152,7 @@
       margin-bottom: 1rem;
    }
 
-   .query__related a {
+   .query__related div {
       margin: 0.2rem;
    }
 

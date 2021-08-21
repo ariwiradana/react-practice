@@ -1,0 +1,123 @@
+.mobile__nav-container {
+   display: none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 485px) {
+   .mobile__nav-container {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: -100vw;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 500;
+      transition: 0.7s ease;
+      opacity: 0;
+   }
+
+   .mobile__nav {
+      box-sizing: border-box;
+      height: 100%;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+   }
+
+   .mobile__nav-active {
+      left: 0;
+      transition: 0.7s ease;
+      opacity: 1;
+   }
+
+   .mobile__nav-link {
+      font-size: 16px;
+      color: white;
+      font-weight: 600;
+      padding: 1rem;
+      transition: 0.4s ease;
+   }
+
+   .mobile__nav-link:hover {
+      transform: scale(1.05);
+      transition: 0.4s ease;
+      background-color: rgba(255, 255, 255, 0.05);
+   }
+
+   .mobile__nav-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      color: white;
+      cursor: pointer;
+      transition: 0.4s ease;
+   }
+
+   .mobile__nav-close:hover {
+      transform: rotate(90deg);
+      transition: 0.4s ease;
+   }
+}
+
+@media screen and (min-width: 485px) and (max-width: 900px) {
+   .mobile__nav-container {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: -100vw;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 500;
+      transition: 0.7s ease;
+      opacity: 0;
+   }
+
+   .mobile__nav {
+      box-sizing: border-box;
+      height: 100%;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+   }
+
+   .mobile__nav-active {
+      left: 0;
+      transition: 0.7s ease;
+      opacity: 1;
+   }
+
+   .mobile__nav-link {
+      font-size: 16px;
+      color: white;
+      font-weight: 600;
+      padding: 1rem;
+      transition: 0.4s ease;
+   }
+
+   .mobile__nav-link:hover {
+      transform: scale(1.05);
+      transition: 0.4s ease;
+      background-color: rgba(255, 255, 255, 0.05);
+   }
+
+   .mobile__nav-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      color: white;
+      cursor: pointer;
+      transition: 0.4s ease;
+   }
+
+   .mobile__nav-close:hover {
+      transform: rotate(90deg);
+      transition: 0.4s ease;
+   }
+}

@@ -3,18 +3,21 @@
 * {
    padding: 0;
    margin: 0;
-}
-html {
-   scroll-behavior: smooth;
-   font-family: "Raleway", sans-serif;
+   text-decoration: none;
 }
 
 :root {
    --primary: hsl(320, 100%, 54%);
-   --primary-alt: hsl(320, 80%, 70%);
+   --primary-alt: hsl(320, 100%, 50%);
+   --primary-light: hsl(320, 80%, 70%);
 
    --dark: hsl(0, 0%, 9%);
    --dark-alt: hsl(0, 0%, 6%);
+}
+html {
+   scroll-behavior: smooth;
+   font-family: "Raleway", sans-serif;
+   background-color: var(--dark);
 }
 
 /* text */
@@ -60,8 +63,55 @@ p {
    color: white;
 }
 
+/* form */
+
+input:disabled {
+   background-color: rgb(18, 18, 18);
+   cursor: unset;
+}
+
+.form__group {
+   display: flex;
+   align-items: center;
+}
+
+.form__group .form__input {
+   border-radius: 0 0.4rem 0.4rem 0;
+}
+
+.form__password .form__input {
+   border-radius: 0;
+}
+
+.form__block {
+   width: 100%;
+}
+
+.form__input {
+   background-color: rgb(40, 40, 40);
+   outline: none;
+   border: none;
+   padding: 1rem 0;
+   color: white;
+   font-size: 14px;
+   padding-right: 1.4rem;
+   letter-spacing: 0.3px;
+}
+
 .container {
    width: 100%;
    height: 100%;
    background-color: var(--dark);
+}
+
+.form__icon {
+   background-color: rgb(40, 40, 40);
+   border-radius: 0.4rem 0 0 0.4rem;
+   padding: 0.78rem 1rem;
+   color: rgb(180, 180, 180);
+}
+
+.form__icon-password {
+   border-radius: 0 0.4rem 0.4rem 0;
+   cursor: pointer;
 }

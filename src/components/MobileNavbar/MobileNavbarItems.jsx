@@ -1,4 +1,4 @@
-export const navItems = [
+export const mobileNavItems = [
    { title: "Dashboard", path: "/" },
    { title: "Cards", path: "/cards" },
    { title: "App", path: "/app" },

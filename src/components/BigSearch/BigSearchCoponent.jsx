@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import * as Unicons from "@iconscout/react-unicons";
 
 import "../../App.css";
@@ -13,9 +13,9 @@ const BigSearchComponent = (props) => {
                <input
                   type="text"
                   className="big__search-input"
-                  value={props.popular}
+                  value={props.query}
                   onChange={(e) => {
-                     props.setPopular(e.target.value);
+                     props.setQuery(e.target.value);
                      props.search(e.target.value);
                   }}
                   placeholder="Search.."
@@ -23,12 +23,12 @@ const BigSearchComponent = (props) => {
                <Unicons.UilTimes
                   size="18"
                   className={
-                     !props.popular
+                     !props.query
                         ? "big__search-clear-icon"
                         : "big__search-clear-icon clear__icon-active"
                   }
                   onClick={() => {
-                     props.setPopular("");
+                     props.setQuery("");
                   }}
                />
             </div>

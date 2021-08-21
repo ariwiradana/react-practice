@@ -1,22 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, Fragment } from "react";
+import * as Unicons from "@iconscout/react-unicons";
 
 import BigSearchComponent from "../../components/BigSearch/BigSearchCoponent";
 import NavbarComponent from "../../components/Navbar/NavbarComponent";
-import * as Unicons from "@iconscout/react-unicons";
+import CardComponent from "../../components/Card/CardComponent";
+import MobileNavbarComponent from "../../components/MobileNavbar/MobileNavbarComponent";
 
 import "../../App.css";
 import "./HomeContainer.css";
-import CardComponent from "../../components/Card/CardComponent";
 
 const HomeContainer = () => {
+   useEffect(() => {
+      document.title = "Home";
+   });
+
    const [data, setData] = useState([]);
-   const [popular, setPopular] = useState("");
+   const [query, setQuery] = useState("");
    const [loading, setLoading] = useState(false);
 
    const relatedItems = [
-      "web",
-      "laptop",
-      "temple",
+      "person",
+      "human",
+      "animal",
       "bali",
       "restaurant",
       "cars",
@@ -41,15 +46,15 @@ const HomeContainer = () => {
    };
 
    return (
-      <div className="container">
+      <Fragment>
          <NavbarComponent />
          <BigSearchComponent
             search={handleGetUser}
-            popular={popular}
-            setPopular={setPopular}
+            query={query}
+            setQuery={setQuery}
          />
          <div className="content">
-            <div className="search__query">Website</div>
+            <div className="search__query">{query}</div>
             <p className="search__caption">
                Browse 10,000+ website work, designs, illustrations, and graphic
                elements
@@ -59,15 +64,15 @@ const HomeContainer = () => {
                <div className="query__related">
                   {relatedItems.map((item, i) => {
                      return (
-                        <a
+                        <div
                            key={i}
                            onClick={(e) => {
                               handleGetUser(e.target.innerText);
-                              setPopular(e.target.innerText);
+                              setQuery(e.target.innerText);
                            }}
                         >
                            {item}
-                        </a>
+                        </div>
                      );
                   })}
                </div>
@@ -82,7 +87,7 @@ const HomeContainer = () => {
                })}
             </div>
          </div>
-      </div>
+      </Fragment>
    );
 };
 
